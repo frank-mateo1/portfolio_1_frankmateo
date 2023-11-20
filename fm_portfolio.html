@@ -117,7 +117,12 @@
  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </div> <br>
 
+
 </div>
+<button id ="changeTextBtn">Click me!</button>
+<p id="displayText"></p>
+
+
 <script>
   let num1 = 10
   let num2 = 12
@@ -139,8 +144,14 @@
   {console.log("F")}
   }
   CalculateGrade(score)
+
+
+document.getElementById('changeTextBtn')
+document.getElementById('displayText')
+changeTextBtn.addEventListener('click', function(){changeText()})
+function changeText() {
+  displayText.textContent = "hello world!"}
+
 </script>
-
-
 </body>
 </html>
