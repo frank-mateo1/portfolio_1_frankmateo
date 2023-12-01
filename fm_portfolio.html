@@ -152,6 +152,26 @@ changeTextBtn.addEventListener('click', function(){changeText()})
 function changeText() {
   displayText.textContent = "hello world!"}
 
+function validateForm(){
+  let x = document.forms["myform"]["Username"].value
+  let y = document.forms["myform"]["Username"].value
+  if( x=="" && y==""){
+    alert("username/password must be filled out")
+    return false
+}
+else{
+  setTimeout(validateForm, 3000)
+    alert('login successful')
+}
+}
 </script>
+<br><br><br>
+<form name="myform">
+    <input type="text" placeholder="Username" name="Username">
+    <input type="password" placeholder="password" name="password">
+    <input type="submit" onclick="return validateForm()">
+</form>
+<br><br><br>
+
 </body>
 </html>
